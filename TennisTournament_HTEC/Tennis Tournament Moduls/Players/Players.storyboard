@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PlayersVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PlayersVC" id="Y6W-OH-hqX" customClass="PlayersVC" customModule="TennisTournament_HTEC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tournament id 822344" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19f-T4-ere">
+                                <rect key="frame" x="20" y="54" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="YIH-uu-Gaz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLZ-58-2gD">
+                                <rect key="frame" x="25" y="134" width="262" height="40.5"/>
+                                <color key="backgroundColor" red="0.00068277906389999999" green="0.27786391970000002" blue="0.28763338919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="CREATE  DRAW">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onDravBtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1er-1d-T75"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZYh-B1-Txb">
+                                <rect key="frame" x="5" y="194.5" width="404" height="667.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="VIY-49-hZ5"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="Pur-h3-IIN"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="32" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aa8-Wd-6Sm">
+                                <rect key="frame" x="302" y="137.5" width="97" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="gB1-9t-W9g"/>
+                                </constraints>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set number of players for draw" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlw-s9-ck0">
+                                <rect key="frame" x="302" y="103.5" width="97" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="UQS-lF-hlo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ZYh-B1-Txb" secondAttribute="bottom" id="3j4-CF-rny"/>
+                            <constraint firstItem="KLZ-58-2gD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="8o6-52-j2i"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="19f-T4-ere" secondAttribute="trailing" constant="20" id="EXK-CZ-BQu"/>
+                            <constraint firstAttribute="trailing" secondItem="Nlw-s9-ck0" secondAttribute="trailing" constant="15" id="KNU-kF-Qh8"/>
+                            <constraint firstItem="KLZ-58-2gD" firstAttribute="top" secondItem="19f-T4-ere" secondAttribute="bottom" constant="50" id="LVK-Pq-PMP"/>
+                            <constraint firstItem="Nlw-s9-ck0" firstAttribute="leading" secondItem="aa8-Wd-6Sm" secondAttribute="leading" id="O9J-Pg-Cso"/>
+                            <constraint firstItem="aa8-Wd-6Sm" firstAttribute="centerY" secondItem="KLZ-58-2gD" secondAttribute="centerY" id="PlY-MX-bf4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZYh-B1-Txb" secondAttribute="trailing" constant="5" id="TvS-7E-rhc"/>
+                            <constraint firstItem="19f-T4-ere" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="UXg-An-VdW"/>
+                            <constraint firstItem="aa8-Wd-6Sm" firstAttribute="leading" secondItem="KLZ-58-2gD" secondAttribute="trailing" constant="15" id="Ysq-7S-caY"/>
+                            <constraint firstItem="aa8-Wd-6Sm" firstAttribute="top" secondItem="Nlw-s9-ck0" secondAttribute="bottom" constant="5" id="dLl-OS-mWx"/>
+                            <constraint firstItem="ZYh-B1-Txb" firstAttribute="top" secondItem="KLZ-58-2gD" secondAttribute="bottom" constant="20" id="eGu-YG-T7h"/>
+                            <constraint firstItem="ZYh-B1-Txb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="fBf-Wt-foK"/>
+                            <constraint firstItem="19f-T4-ere" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="rTX-qI-4GZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aa8-Wd-6Sm" secondAttribute="trailing" constant="15" id="xJ0-ad-ac8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawBtn" destination="KLZ-58-2gD" id="w1A-pJ-BDU"/>
+                        <outlet property="numOfPlayersForDrawTextField" destination="aa8-Wd-6Sm" id="kzt-QN-ZlJ"/>
+                        <outlet property="playersTableView" destination="ZYh-B1-Txb" id="MyT-j1-Ycs"/>
+                        <outlet property="tournamentNameLabel" destination="19f-T4-ere" id="pbg-Wd-I3v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="100"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
